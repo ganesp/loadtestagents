@@ -5,7 +5,10 @@ param(
 [switch]$publish,
 
 # Configuration: dev or release, default is 'dev'
-[string]$config="dev"
+[string]$config="dev",
+
+# Switch to push new version
+[switch]$push
 )
 
 if($config -eq "release"){
@@ -34,10 +37,13 @@ Write-Host "New version: $newVersion"
 $configJson.version=[string]$newVersion
 $configJson | ConvertTo-Json -depth 100 | Out-File $configJsonFile -Encoding ascii
 
-# Checkin the updated manifest
-git add $configJsonFile
-git commit -m "Updated $config version to $version"
-git push
+if($push)
+{
+	# Checkin the updated manifest
+	git add $configJsonFile
+	git commit -m "Updated $config version to $version"
+	git push
+}
 
 if($config -eq "release")
 {
