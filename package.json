@@ -33,6 +33,7 @@
     "@types/react-dom": "^16.0.5",
     "@uifabric/example-app-base": "^5.11.5",
     "es6-promise": "4.1.1",
+    "hoek": "^5.0.3",
     "office-ui-fabric-react": "^5.106.1",
     "q": "^1.5.1",
     "react": "^16.3.2",
