@@ -48,7 +48,7 @@ module.exports = {
             { from: "./src/*.html", to: "./" },
             { from: "./images", to: "images" },
             { from: "./vss-extension.json", to: "vss-extension.json" },
-            { from: "./overview.md", to: "overview.md" }
+            { from: "./readme.md", to: "readme.md" }
         ])
     ]
 }
