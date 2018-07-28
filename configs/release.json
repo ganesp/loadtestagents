@@ -1,0 +1,6 @@
+{
+    "id":  "loadtest-agents-extension",
+    "public":  true,
+    "publisher":  "ganesp",
+    "version":  "1.0.137"
+}

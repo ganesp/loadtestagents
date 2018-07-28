@@ -1,0 +1,55 @@
+{
+    "manifestVersion":  "1",
+    "id":  "loadtest-agents-extension",
+    "publisher":  "GaneshPande",
+    "version":  "1.0.140",
+    "name":  "Load Test Agents",
+    "description":  "Manage self-provisioned load test agents",
+    "public":  false,
+    "targets":  [
+                    {
+                        "id":  "Microsoft.VisualStudio.Services.Cloud"
+                    }
+                ],
+    "icons":  {
+                  "default":  "images/logo.png"
+              },
+    "categories":  [
+                       "Test"
+                   ],
+    "content":  {
+                    "details":  {
+                                    "path":  "overview.md"
+                                }
+                },
+    "contributions":  [
+                          {
+                              "id":  "loadtestagents-hub",
+                              "type":  "ms.vss-web.hub",
+                              "targets":  [
+                                              "ms.vss-test-web.test-hub-group"
+                                          ],
+                              "properties":  {
+                                                 "name":  "Load Test Agents",
+                                                 "uri":  "src/default.html"
+                                             }
+                          }
+                      ],
+    "scopes":  [
+                   "vso.loadtest_write"
+               ],
+    "files":  [
+                  {
+                      "path":  "src",
+                      "addressable":  true
+                  },
+                  {
+                      "path":  "images",
+                      "addressable":  true
+                  },
+                  {
+                      "path":  "libs",
+                      "addressable":  true
+                  }
+              ]
+}
