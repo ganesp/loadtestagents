@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/5.0.1/css/fabric.min.css">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF8">
+    <title>Load test agents</title>
+    <link rel="stylesheet" type="text/css" href="../libs/fabric.min.css">
+    <script src="../libs/es6-promise.min.js"></script>
+    <script src="../libs/VSS.SDK.min.js"></script>
+</head>
+
+<body style="min-height: 0%">
+    <script>
+        VSS.init({
+            setupModuleLoader: true,
+            explicitNotifyLoaded: true,
+            usePlatformScripts: true,
+            usePlatformStyles: true,
+            moduleLoaderConfig: {
+                paths: {
+                    Scripts: 'scripts'
+                }
+            }
+        });
+    </script>
+    <script>
+        VSS.ready(function () {            
+            require(["src/app"], function (app) {
+                app.init("loadtest-agents-extension");
+                VSS.notifyLoadSucceeded();
+            });
+        });
+    </script>
+
+    <div id="loadtest-agents-extension" />
+</body>
+
+</html>
