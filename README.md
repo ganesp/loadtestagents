@@ -10,3 +10,8 @@ To manage these self-provisioned load test agents, users can download a PowerShe
 [Download powershell script to list down the registered machines](https://elsprodch2su1.blob.core.windows.net/ets-containerfor-loadagentresources/bootstrap/ManageVSTSCloudLoadAgent.ps1)
 
 However, some of the operations supported by the script can be done using [VSTS CLT REST APIs](https://docs.microsoft.com/en-us/rest/api/vsts/clt/?view=vsts-rest-4.1) so we encapsulated these in a VSTS extension: **[Load Test Agents](https://marketplace.visualstudio.com/items?itemName=ganesp.loadtest-agents-extension)**, making it easier for users to list and delete load test agents without the need to move away from the VSTS portal.
+
+# From where to get this extension added to my VSTS account?
+Here you go: **[Load Test Agents](https://marketplace.visualstudio.com/items?itemName=ganesp.loadtest-agents-extension)**
+
+![Screenshot of the extension UX](https://raw.githubusercontent.com/ganesp/loadtestagents/master/images/screenshot.png)
